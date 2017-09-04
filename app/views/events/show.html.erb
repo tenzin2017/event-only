@@ -1,1 +1,7 @@
-events#show page
+events#show page <br><br />
+
+<%= link_to " Show all events", events_path %><br />
+
+<%= render 'single_event', event: @event %>
+
+<%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to 'Delete', event_path(@event), method: :delete, data: {confirm: "Are you sure you want to delete the location '#{@event.name}'? This cannot be undone!"} %>
